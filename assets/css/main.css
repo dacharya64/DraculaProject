@@ -2162,7 +2162,8 @@ input, select, textarea {
 
 	#header {
 		position: relative;
-		background-image: url("../../images/header.jpg");
+		/*background-image: url("../../images/header.jpg");*/
+		background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('http://placehold.it/350x150');
 		background-size: cover;
 		background-position: center center;
 		background-attachment: fixed;
@@ -2170,6 +2171,7 @@ input, select, textarea {
 		text-align: center;
 		padding: 7.5em 0 2em 0;
 		cursor: default;
+
 	}
 
 		#header:before {
