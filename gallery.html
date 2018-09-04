@@ -11,6 +11,17 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<script src="assets/js/jquery.min.js"></script>
+		<script>
+	  $(function(){
+	    var includes = $('[data-include]');
+	    jQuery.each(includes, function(){
+	      var file = $(this).data('include') + '.html';
+	      $(this).load(file);
+	    });
+	  });
+	</script>
+
 	</head>
 	<body class="left-sidebar is-preload">
 		<div id="page-wrapper">
@@ -50,24 +61,7 @@
 
 
 									<footer align="right">
-
-										<a href="gallery.html">All objects</a>
-										<br><br>
-										<a href="jonathan_journal.html">Jonathan Harker's Journal</a>
-										<br><br>
-										<a href="mina_journal.html" >Mina's Journal</a>
-										<br><br>
-										<a href="seward_diary.html" >Dr. Seward's Phonograph Diary, Transcription</a>
-										<br><br>
-										<a href="audio_excerpt.html">Audio excerpt spoken by Van Helsing, recorded on Dr. Seward's Phonograph Diary</a>
-										<br><br>
-										<a href="telegrams.html">Telegrams</a>
-										<br><br>
-										<a href="#">Letters</a>
-										<br><br>
-										<a href="#">Memoranda</a>
-										<br><br>
-										<a href="#">Exterior</a>
+										<div data-include="sidebar"></div>
 									</footer>
 
 								</section>
@@ -83,6 +77,11 @@
 
 		</div>
 
+
+		<script>
+		includeHTML();
+		</script>
+
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.dropotron.min.js"></script>
@@ -92,6 +91,7 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script src="assets/js/csi.min.js"></script>
 
 	</body>
 </html>
